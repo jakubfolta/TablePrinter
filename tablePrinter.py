@@ -42,7 +42,9 @@ def printTable(table):
     cols = len(table[0])
 
     for x in range(cols):
-        for y in 
+        for y in range(rows):
+            print((table[x][y]).rjust(colsWidth[y]))
+        print()
     
 
 
