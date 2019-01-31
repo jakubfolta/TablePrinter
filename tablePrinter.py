@@ -25,3 +25,8 @@ def printTableJustifiedToLongestStringInRow(table):
         print()
     
 printTableJustifiedToLongestStringInRow(tableData)
+
+def findLongestString(table):
+    colsWidth = [0] *len(table)
+    cols = len(table[0])
+    
