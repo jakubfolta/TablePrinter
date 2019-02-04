@@ -50,6 +50,8 @@ def printTable(table):
 
 printTable(tableData)
 
+print()
+
 
 def findTheLongestString(data):
     colWidths = [0] * len(data)
@@ -60,9 +62,20 @@ def findTheLongestString(data):
         for y in range(cols):
             if len(data[x][y]) > colWidths[x]:
                 colWidths[x] = len(data[x][y])
-    print(colWidths)
+    return colWidths
 
-findTheLongestString(tableData)
+def printTableRightJustifiedToTheLongestStringInTheRow(data):
+    colWidths = findTheLongestString(data)
+    cols = len(data[0])
+    rows = len(data)
+
+    for x in range(cols):
+        for y in range(rows):
+            print((data[y][x]).rjust(colWidths[y]), end = '-')
+        print()
+
+printTableRightJustifiedToTheLongestStringInTheRow(tableData)
+    
 
     
     
